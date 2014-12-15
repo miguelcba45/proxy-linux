@@ -1,0 +1,42 @@
+ANTES DE LA INSTALACIÓN DEBEMOS CAMBIAR LOS DATOS DEL SCRIPT POR LOS NUESTROS.
+
+NOTA: se puede modificar con el editor de texto de su preferencia. 
+  
+MODIFICAR:
+usuario: Colar su usuario proxy
+Contraseña: Colocar su contraseña proxy
+proxy.com: Colocar su dirección proxy
+Numeropuerto: Colocar el puerto del proxy
+
+Es necesario sustituir todos los datos en todas las lineas con los nuestros.
+
+
+INSTALACIÓN
+
+** Descargue el archivo proxy.sh
+
+** Ubíquese en la carpeta de descarga del archivo, 
+
+Ejemplo:
+
+miguel@ubuntu-pc $ cd  /home/ubuntu/Descargas
+
+** Queda algo así: 
+
+miguel@ubuntu-pc/Descargas $ 
+
+** Dar permiso al archivo:
+
+chmod +x proxy.sh
+
+Ejemplo:
+
+miguel@ubuntu-pc/Descargas $ sudo chmod +x proxy.sh
+
+
+** Por ultimo le ejecutamos el script
+
+Ejemplo:
+miguel@ubuntu-pc/Descargas $ sudo ./proxy.sh
+
+¡¡¡Listo!!!
