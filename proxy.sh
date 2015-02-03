@@ -11,21 +11,26 @@ echo "############################################################"
 
 #usuario
 
+read -p "Introduce el nuevo Usuario: " usuario
+read -p "Introduce el nuevo contraseña: " password
+read -p "Introduce el nuevo Dirección proxy: " proxy
+read -p "Introduce el nuevo Puerto: " puerto
 
-#configuracion del bash
-echo "export http_proxy=http://usuario:contraseña@proxy.com:numeropuerto/" >> /etc/bash.bashrc
-echo "export https_proxy=http://usuario:contraseña@proxy.com:numeropuerto/" >> /etc/bash.bashrc
-echo "export ftp_proxy=http://usuario:contraseña@proxy.com:numeropuerto/" >>/etc/bash.bashrc
 
-#configuracion del environment
-echo 'http_proxy="http://usuario:contraseña@proxy.com:numeropuerto/"' >> /etc/environment
-echo 'https_proxy="http://usuario:contraseña@proxy.com:numeropuerto/"' >> /etc/environment
-echo 'ftp_proxy="http://usuario:contraseña@proxy.com:numeropuerto/"' >> /etc/environment
+configuracion del bash
+echo "export http_proxy=http://$usuario:$password@$proxy:$puerto/" >> /etc/bash.bashrc
+echo "export https_proxy=http://$usuario:$password@$proxy:$puerto/" >> /etc/bash.bashrc
+echo "export ftp_proxy=http://$usuario:$password@$proxy:$puerto/" >>/etc/bash.bashrc
 
-#configuracion del apt
-echo 'Acquire::http::proxy "http://usuario:contraseña@proxy.com:numeropuerto/";' >> /etc/apt/apt.conf.d/proxy
-echo 'Acquire::https::proxy "http://usuario:contraseña@proxy.com:numeropuerto/";' >> /etc/apt/apt.conf.d/proxy
-echo 'Acquire::ftp::proxy "http://usuario:contraseña@proxy.com:numeropuerto/";' >> /etc/apt/apt.conf.d/proxy
+configuracion del environment
+echo 'http_proxy="http://$usuario:$password@$proxy:$puerto/"' >> /etc/environment
+echo 'https_proxy="http://$usuario:$password@$proxy:$puerto/"' >> /etc/environment
+echo 'ftp_proxy="http://$usuario:$password@$proxy:$puerto/"' >> /etc/environment
+
+configuracion del apt
+echo 'Acquire::http::proxy "http://$usuario:$password@$proxy:$puerto/";' >> /etc/apt/apt.conf.d/proxy
+echo 'Acquire::https::proxy "http://$usuario:$password@$proxy:$puerto/";' >> /etc/apt/apt.conf.d/proxy
+echo 'Acquire::ftp::proxy "http://$usuario:$password@$proxy:$puerto/";' >> /etc/apt/apt.conf.d/proxy
 
 # reset del equipo
 
